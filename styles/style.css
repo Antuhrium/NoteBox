@@ -1,0 +1,147 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;500;700&display=swap');
+
+body {
+    font-family: 'Ubuntu', sans-serif;
+    padding: 80px 20px 0;
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+}
+
+.title {
+    color: #262626;
+    font-size: 64px;
+    font-weight: 700;
+    text-align: center;
+}
+
+.input-wrapper {
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    font-family: inherit;
+}
+
+@media screen and (max-width:1024px) {
+    .input-wrapper {
+        flex-direction: column;
+        align-items: end;
+    }
+}
+
+.text {
+    display: flex;
+    flex-direction: column;
+    border-radius: 15px;
+    background-color: #D9D9D9;
+    font-family: inherit;
+}
+
+.input-text {
+    width: 830px;
+    height: 80px;
+
+    z-index: 10;
+    resize: none;
+    transition: height .1s linear;
+
+    padding: 30px 40px;
+
+    color: #262626;
+    font-size: 16px;
+    font-weight: 500;
+}
+
+@media screen and (max-width:1024px) {
+    .input-text {
+        width: calc(100vw - 40px);
+    }
+}
+
+.input-text::-webkit-scrollbar {
+    width: 0 !important
+}
+
+.input-text:focus {
+    color: #262626;
+}
+
+#addText:focus {
+    height: 150px;
+}
+
+#addBtn {
+    width: 150px;
+    height: 80px;
+    border-radius: 15px;
+    background: #262626;
+}
+
+@media screen and (max-width:1024px) {
+    #addBtn {
+        width: 30%;
+    }
+}
+
+@media screen and (max-width:768px) {
+    #addBtn {
+        width: 100%;
+    }
+}
+
+#notesContainer {
+    max-width: 1700px;
+    display: flex;
+    flex-wrap: wrap;
+    margin: auto;
+    justify-content: center;
+    gap: 20px;
+}
+
+#note {
+    width: 300px;
+    height: fit-content;
+    max-height: 250px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    padding: 25px;
+    border-radius: 15px;
+    background: #262626;
+}
+
+@media screen and (max-width:768px) {
+    #note {
+        width: calc(100vw - 40px);
+    }
+}
+
+#noteTitleContainer {
+    display: flex;
+}
+
+#noteTitle {
+    width: 100%;
+    overflow-y: hidden;
+    overflow-x: hidden;
+    font-size: 24px;
+    font-weight: 500;
+    height: 1.2em;
+    font-family: 'Ubuntu', sans-serif;
+}
+
+#noteTitle::-webkit-scrollbar {
+    width: 0 !important
+}
+
+#noteText {
+    width: 100%;
+    height: 100%;
+    overflow-y: scroll;
+    font-family: 'Ubuntu', sans-serif;
+}
+
+#noteText::-webkit-scrollbar {
+    width: 0 !important
+}
